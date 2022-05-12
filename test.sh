@@ -15,3 +15,4 @@ if ["$OUTPUT= "Encantado de Saludarte, secreto"]; then
 else
 	echo "Test Fallado"
 fi
+
