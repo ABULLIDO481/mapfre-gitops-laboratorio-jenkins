@@ -7,6 +7,12 @@ pipeline {
                 echo 'Hello World'
             }
         }
+		stage('tests'){
+			when {branch 'PR-*'}
+			steps{
+				sh './test.sh'
+			}			
+		}
 		stage('Segundo stage') {
 			agent {label 'docker-agent'}
             steps {
@@ -16,12 +22,6 @@ pipeline {
                     ls -la /
                 '''
             }
-		}
-		stage('tests'){
-			when {branch 'PR-*'}
-			steps{
-				sh './test.sh'
-			}			
 		}
     }
 }
