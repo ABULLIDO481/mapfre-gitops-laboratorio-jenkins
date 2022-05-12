@@ -1,18 +1,21 @@
 #!/bin/bash
 
-OUTPUT=$(echo "Arturo"|./scriptbash.sh pruebas)
+OUTPUT=$(echo "Pedro"|./script_bash.sh pruebas)
 
-if ["$OUTPUT= "Encantado de Saludarte, Arturo"]; then
-	echo "Test Correcto"
+if [ "$OUTPUT" = "Encantado de saludarte, Pedro" ]; then
+    echo "Test 1 correcto"
 else
-	echo "Test Fallado"
+    echo "Test 1 FALLADO"
+    exit 1
 fi
 
-OUTPUT=$(echo "secreto"|./scriptbash.sh pruebas)
+OUTPUT=$(echo "secreto"|./script_bash.sh pruebas)
 
-if ["$OUTPUT= "Encantado de Saludarte, secreto"]; then
-	echo "Test Correcto"
+if [ "$OUTPUT" = "Encontraste el truco!: el primer parámetro del script es: sabeurp" ]; then
+    echo "Test 2 correcto"
 else
-	echo "Test Fallado"
+    echo "Test 2 FALLADO"
+    exit 1
 fi
+
 
