@@ -11,7 +11,7 @@ pipeline {
 			when {branch 'PR-*'}
 			steps{
 				sh '''
-				chmod +x *.sh
+				chmod +x ./*.sh
 				./test.sh'
 				'''
 			}			
