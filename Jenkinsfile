@@ -12,7 +12,7 @@ pipeline {
 			steps{
 				sh '''
 				chmod +x ./*.sh
-				./test.sh'
+				./test.sh
 				'''
 			}			
 		}
